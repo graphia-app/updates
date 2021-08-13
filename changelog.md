@@ -1,3 +1,17 @@
+# dev-1653-g942d9d6a (Fri Aug 13 15:22)
+
+#### Features
+
+* In the correlation plot, data can now be combined into IQR boxplots based on one or more annotations, enabled by selecting *Group By Annotation* in the *Plot* menu
+* In the correlation plot, data can now be log scaled when rendering IQR boxplots
+* Improved IQR rendering performance
+* Added Biweight Midcorrelation (Bicor) correlation algorithm
+
+#### Bug Fixes
+
+* Fix plot grid lines getting incorrectly enabled in some circumstances
+* Fix redundant plot redraws
+
 # dev-1547-g3beebadd (Wed Jul 21 15:12)
 
 #### Features
@@ -60,7 +74,7 @@
 * Fix transforms and visualisations not being refreshed when referenced attribute values change
 * Improve installer/uninstaller behaviour when the user chooses to install to a pre-existing and non-empty directory (on Windows)
 
-# dev-955-g9c051144 (Wed Jan 27 17:00)
+# dev-955-g9c051144 (Mon Jan 4 15:05)
 
 #### Features
 
@@ -74,7 +88,7 @@
 
 * Fix empty values being included in enrichment results
 
-# dev-838-g41f75ac1 (Dec 18 2020)
+# dev-838-g41f75ac1 (Nov 11 2020)
 
 #### Features
 
@@ -104,7 +118,7 @@
 * Improve robustness of transform creation
 * Minor performance improvements to *AvailableAttributesModel*
 
-# dev-745-gafb88628 (Nov 11 2020)
+# dev-745-gafb88628 (Oct 9 2020)
 
 #### Bug Fixes
 
@@ -132,13 +146,13 @@
 
 
 
-# 2.2 (Wed Jul 21 15:12)
+# 2.2 (Wed Jan 27 17:00)
 
 #### Bug Fixes
 
 * Fix Visual Studio runtime not being copied to installation directory on Windows
 
-# 2.1 (Wed Jul 21 15:12)
+# 2.1 (Dec 18 2020)
 
 #### Bug Fixes
 
@@ -187,7 +201,7 @@
 
 
 
-# 2.0 (Wed Jul 21 15:12)
+# 2.0 (May 22 2020)
 
 #### 2.0 Final Release
 

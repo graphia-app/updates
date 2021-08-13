@@ -14,8 +14,12 @@ do
         UNQUOTED_CHANGELOG="${CHANGELOG%\"}"
         UNQUOTED_CHANGELOG="${UNQUOTED_CHANGELOG#\"}"
         CHANGELOGS[${UNQUOTED_VERSION}]=${UNQUOTED_CHANGELOG}
-        DATE=$(git show --no-patch --no-notes --pretty='%ad' --date=human ${SHA})
-        DATES[${UNQUOTED_VERSION}]=${DATE}
+
+        if [[ ! -v "DATES[${UNQUOTED_VERSION}]" ]]
+        then
+            DATE=$(git show --no-patch --no-notes --pretty='%ad' --date=human ${SHA})
+            DATES[${UNQUOTED_VERSION}]=${DATE}
+        fi
     done < <(echo ${INDEX_JSON} | jq '.updates' | xxd -r -p | jq '.[] | .version,.changeLog')
 done < <(git rev-list --reverse master)
 
