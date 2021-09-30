@@ -1,3 +1,24 @@
+# dev-1760-gf6d1d5d3-debug (Thu Sep 30 17:31)
+
+#### Features
+
+* In the correlation plot, when *Group By Annotation* is enabled there is now another option to colour the IQR boxes with a user selected annotation
+* The correlation plot can now be panned and zoomed using the mouse wheel
+* When displaying IQR plots, outliers can now be disabled by toggling the *Show Outliers* menu option
+* Add facility to configure network proxy
+
+#### Bug Fixes
+
+* Fix a crash that occurred when removing attributes
+* Fix graphia:// style links not working reliably where there is a chain of web server redirects
+* The epsilon used when log scaling data is now computed to use an appropriately sized value rather than a fixed constant
+* Fix numeric column annotations with empty values being treated as categorical ones
+* Hopefully at least reduce the occurence of the macOS pthreads crash
+* Fix inoperative slider when a transform parameter has a large range
+* Fix potential crash when importing attributes when there is no key match
+* (Hopefully) workaround a crash in Qt that occurs when interacting with the graph size estimate plot on macOS
+
+
 # dev-1653-g942d9d6a (Fri Aug 13 15:22)
 
 #### Features
