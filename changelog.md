@@ -1,4 +1,21 @@
-# dev-1760-gf6d1d5d3-debug (Thu Sep 30 17:31)
+# dev-1811-g0ab9cf22 (Wed 15:03)
+
+#### Features
+
+* Add option to clone any attribute into a new user defined attribute
+* Add option to edit user defined attributes
+* Add various options to node attribute table context menu
+* Add a few toolbar buttons for controlling the correlation plot
+
+#### Bug Fixes
+
+* Fix visualisation attribute list not updating following attribute changes
+* Fix crash on correlation plot when moving the mouse along a particular path
+* Fix empty graph warning being displayed before estimate completes
+* Fix crash on loading certain adjacency matrix files
+
+
+# dev-1760-gf6d1d5d3-debug (Sep 30 2021)
 
 #### Features
 
@@ -19,7 +36,7 @@
 * (Hopefully) workaround a crash in Qt that occurs when interacting with the graph size estimate plot on macOS
 
 
-# dev-1653-g942d9d6a (Fri Aug 13 15:22)
+# dev-1653-g942d9d6a (Aug 13 2021)
 
 #### Features
 
@@ -33,7 +50,7 @@
 * Fix plot grid lines getting incorrectly enabled in some circumstances
 * Fix redundant plot redraws
 
-# dev-1547-g3beebadd (Wed Jul 21 15:12)
+# dev-1547-g3beebadd (Jul 21 2021)
 
 #### Features
 
@@ -64,7 +81,7 @@
 
 * An XDG desktop item is now automatically created, so Graphia will appear in system menus
 
-# dev-1350-g04d8368a (Mon May 3 13:10)
+# dev-1350-g04d8368a (May 3 2021)
 
 #### Features
 
@@ -95,7 +112,7 @@
 * Fix transforms and visualisations not being refreshed when referenced attribute values change
 * Improve installer/uninstaller behaviour when the user chooses to install to a pre-existing and non-empty directory (on Windows)
 
-# dev-955-g9c051144 (Mon Jan 4 15:05)
+# dev-955-g9c051144 (Jan 4 2021)
 
 #### Features
 
@@ -167,7 +184,7 @@
 
 
 
-# 2.2 (Wed Jan 27 17:00)
+# 2.2 (Jan 27 2021)
 
 #### Bug Fixes
 
