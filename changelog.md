@@ -6,6 +6,23 @@
 
 #### Transition to 3.0
 
+# dev-1912-g9be583af (11 seconds ago)
+
+#### Features
+* When there is a choice of file type or plugin to use, said choice can be set as a default, avoiding future prompts
+* The file type selector of the file open dialog is now used to guide file type and plugin selection
+* There is now an option (on the *Misc* tab of the *Options* dialog) to change the way *Find By Attribute Value* sorts the list of possible attribute values; it can now be done alphanumerically, in addition to the normal behaviour of sorting from the large to small set size
+* The correlation plot columns can now be sorted by data value
+* The pairwise file loader now has a front end that allows for the configuration of columns within the source data table, so it's no longer necessary for pairwise files to be strictly 2 or 3 columns
+
+#### Bug Fixes
+* Fix text style options not taking effect immediately
+* Fix enrichment results export being initially disabled
+* Fix initial dimensions on screenshot capture preset often being wrong
+* Fix renderer not updating when focused labelling enabled
+* Fix adjacency matrix parser not setting the node names
+* Use the correct file extension when saving a non-native format
+
 # dev-1811-g0ab9cf22 (Wed Jan 12 15:03)
 
 #### Features
