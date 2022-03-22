@@ -6,7 +6,17 @@
 
 #### Transition to 3.0
 
-# dev-1912-g9be583af (11 seconds ago)
+# dev-1923-g31015c13 (7 hours ago)
+
+#### Bug Fixes
+* Fix crash that occurred when changing the graph with the *Find* interface active
+* Prevent showing the main context menu over the *Find* interface
+* Fix delay in showing *Find By Attribute* interface when an attribute has a large quantity of values
+* Collect more information when a *std::exception* based crash occurs
+* Fix force directed layout getting stuck on some contracted graphs
+* Fix deadlock/crash when cancelling a command
+
+# dev-1912-g9be583af (Wed Mar 9 17:53)
 
 #### Features
 * When there is a choice of file type or plugin to use, said choice can be set as a default, avoiding future prompts
