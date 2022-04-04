@@ -6,7 +6,17 @@
 
 #### Transition to 3.0
 
-# dev-1923-g31015c13 (7 hours ago)
+# dev-1957-g6707ab8c (6 hours ago)
+
+#### Features
+* Add facility to select favourite transforms, which are displayed at the top of the transform list
+* Improved detection of video driver crashes
+
+#### Bug Fixes
+* Bring MCL inline with the reference implementation by not skipping single node clusters
+* Fix pairwise exporter introducing extra quotes into its output
+
+# dev-1923-g31015c13 (Tue Mar 22 10:47)
 
 #### Bug Fixes
 * Fix crash that occurred when changing the graph with the *Find* interface active
