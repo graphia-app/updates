@@ -17,7 +17,7 @@ do
 
         if [[ ! -v "DATES[${UNQUOTED_VERSION}]" ]]
         then
-            DATE=$(git show --no-patch --no-notes --pretty='%ad' --date=human ${SHA})
+            DATE=$(git show --no-patch --no-notes --pretty='%ad' --date=format:'%b %d %Y' ${SHA})
             DATES[${UNQUOTED_VERSION}]=${DATE}
         fi
     done < <(echo ${INDEX_JSON} | jq '.updates' | xxd -r -p | jq '.[] | .version,.changeLog')
@@ -27,6 +27,12 @@ VERSIONS=$(echo ${!CHANGELOGS[@]})
 VERSIONS=$(echo $(printf "%s\n" ${VERSIONS} | sort -rV))
 for VERSION in ${VERSIONS}
 do
+    # HACK
+    if [[ "${VERSION}" =~ ^dev-9999.*|.*rc[0-9]+$ ]]
+    then
+        continue
+    fi
+
     echo -e "# ${VERSION} (${DATES[${VERSION}]})\n"
     echo -e "${CHANGELOGS[${VERSION}]}\n"
 done
