@@ -1,3 +1,12 @@
+# dev-1984-gd69a9124 (Apr 29 2022)
+
+#### Features
+* Graph metrics display now reflects the visible component, when in component mode
+
+#### Bug Fixes
+* Fix GML saver creating key names that start with a digit
+* Fix various problems with the GraphML saver
+
 # dev-1971-g9360a966 (Apr 07 2022)
 
 #### Features
