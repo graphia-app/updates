@@ -1,3 +1,9 @@
+# dev-1986-ge5cd4532 (May 11 2022)
+
+#### Bug Fixes
+* Fix crash that occurred if the application was closed during a particular phase of a load
+* Fix blank graph rendering in some rare circumstances
+
 # dev-1984-gd69a9124 (Apr 29 2022)
 
 #### Features
@@ -245,7 +251,7 @@
 #### Loading
 * Downloadable files can now be opened directly, either by using the *Open Url* option in the *File* menu, or by dragging and dropping hyperlinks onto the main window
 * A Graphia specific URL scheme is now registered so that the application may now be opened by clicking special hyperlinks; these can be created using the [Link Generator](https://graphia.app/link-generator.html)
-* Tabular lists of node pairs can now be loaded from pairwise CSV, TSV, SSV and XLSX files 
+* Tabular lists of node pairs can now be loaded from pairwise CSV, TSV, SSV and XLSX files
 * Loading Cytoscape eXchange files is now possible, as used on [NDex](https://www.ndexbio.org/)
 * Graphviz *.dot* files may now be loaded
 * When loading from an adjacency matrix, it is now possible to choose to discard edges based on edge weight, and to skip double edges where the matrix is symmetric
