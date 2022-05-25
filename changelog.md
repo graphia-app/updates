@@ -1,4 +1,9 @@
-# dev-1986-ge5cd4532 (May 11 2022)
+# dev-1990-g471a74cc (May 25 2022)
+
+#### Bug Fixes
+* Fix key detection during attribute import where keys are large integers
+
+# dev-1986-ge5cd4532 (May 12 2022)
 
 #### Bug Fixes
 * Fix crash that occurred if the application was closed during a particular phase of a load
