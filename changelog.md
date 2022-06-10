@@ -1,3 +1,8 @@
+# dev-1997-g830e75cd (Jun 10 2022)
+
+#### Bug Fixes
+* Fix keyboard selection in the main data table
+
 # dev-1990-g471a74cc (May 25 2022)
 
 #### Bug Fixes
