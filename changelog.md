@@ -1,3 +1,10 @@
+# dev-2002-g5cf925ef (Jun 23 2022)
+
+#### Bug Fixes
+* Fix *Remember This Choice* not working when the file being opened contained more than one period
+* Fix potential crash that might occur when changing the find attribute multiple times
+* Fix crash when plotting an IQR with zero outliers
+
 # dev-1997-g830e75cd (Jun 10 2022)
 
 #### Bug Fixes
