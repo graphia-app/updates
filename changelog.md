@@ -1,3 +1,8 @@
+# dev-2301-ga763230a (Jul 11 2022)
+
+#### Features
+* Move code base to Qt 6.3 🥳 (Please [report](https://github.com/graphia-app/graphia/issues) bugs/regressions)
+
 # dev-2002-g5cf925ef (Jun 23 2022)
 
 #### Bug Fixes
