@@ -1,3 +1,15 @@
+# dev-2326-g4979e37f (Aug 11 2022)
+
+#### Features
+* Add mechanism to save sets of transforms and visualisations for later recall
+
+  ![templates.png](file:templates.png)
+
+* Add option to interpret trackpad pan gestures as zooming; this is primarily useful for users of the Apple *Magic Mouse*, where it's more intuitive for scrolling vertically to map to zooming
+
+#### Bug Fixes
+* Fix bookmark hotkeys being inoperative
+
 # dev-2301-ga763230a (Jul 11 2022)
 
 #### Features
