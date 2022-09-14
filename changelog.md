@@ -1,3 +1,20 @@
+# dev-2395-gad4677c5b (Sep 14 2022)
+
+#### Features
+* Source, target and neighbour rows can now be selected in the data table via the context menu
+* In the correlation loader, input data can now be clipped against a constant, or by *Winsorization*
+* Correlation plot columns can now be sorted by hierarachical clustering, using the SLINK method with a Euclidean distance measure
+
+#### Bug Fixes
+* Fix directional edges being visible
+* Fix plugin/extension preferences getting forgotten
+* Fix graph size estimate plot inappropriately showing \"Empty Graph\" in some circumstances
+* Fix poor behaviour when loading correlation data with anonymous columns
+* Fix various assorted problems with menu state, many of which manifested most obviously on macOS
+
+#### Other
+* macOS builds now take advantage of *Apple M1* hardware
+
 # dev-2326-g4979e37f (Aug 11 2022)
 
 #### Features
