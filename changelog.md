@@ -1,3 +1,13 @@
+# dev-2409-g6a16356b8 (Sep 20 2022)
+
+#### Bug Fixes
+* Fix various instances of the busy indicator being invisible
+* Fix crash involving the selection of attributes
+* Fix the appearance of the background of help tool tips on macOS
+* Improve layout of correlation parameters dialog on macOS
+* Improve appearance of column annotation sort indicators on Windows
+* Relax criteria for acceptable input data on correlation files
+
 # dev-2395-gad4677c5b (Sep 14 2022)
 
 #### Features
