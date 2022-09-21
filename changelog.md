@@ -1,3 +1,8 @@
+# dev-2414-g93c0bffbe (Sep 21 2022)
+
+#### Features
+* Make Winsorization operate on a per-row basis
+
 # dev-2409-g6a16356b8 (Sep 20 2022)
 
 #### Bug Fixes
