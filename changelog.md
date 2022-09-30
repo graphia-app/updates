@@ -1,3 +1,17 @@
+# dev-2435-gaa85b8180 (Sep 30 2022)
+
+#### Changes
+* Clicking on the correlation plot's Y axis no longer sorts by data value
+* Clicking on a column annotation body no longer sorts by that column annotation
+
+#### Bug Fixes
+* Fix *Add Template* menu option being disabled when no visualisations are employed
+* Fix plugin window being created as MDI on Windows
+* Fix *Select Source/Targets/Neighbours* being generally broken
+* Fix initial clipping constant having excessive figures after the decimal point
+* Fix *WebSearch* plugin operation on Windows
+* Fix display acuity on Windows when a non-integral scaling factor is being used (e.g. when a using a high DPI monitor)
+
 # dev-2414-g93c0bffbe (Sep 21 2022)
 
 #### Features
