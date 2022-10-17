@@ -1,3 +1,16 @@
+# dev-2478-g5cce5609e (Oct 17 2022)
+
+#### Bug Fixes
+* Fix mouse clicks being out of sync with display when a large quantity of column annotations are visible
+* Fix \"ghost\" node selection box appearing after an unusual combination of mouse drags and key presses
+* Fix temporary lock-up at the end of a transform application
+* Fix macOS menu hiding
+* Fix visually overlapping components when nodes move from one component to another
+* Fix *Copy Column To Clipboard* copying the wrong column when the columns have been reordered
+
+#### Other
+* Capture more debug output on Windows
+
 # dev-2435-gaa85b8180 (Sep 30 2022)
 
 #### Changes
