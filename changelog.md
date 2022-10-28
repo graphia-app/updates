@@ -1,3 +1,8 @@
+# dev-2485-ga43f5a4df (Oct 28 2022)
+
+#### Bug Fixes
+* Fix *Copy Column To Clipboard* not respecting the current node selection
+
 # dev-2478-g5cce5609e (Oct 17 2022)
 
 #### Bug Fixes
