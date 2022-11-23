@@ -344,6 +344,155 @@
 
 
 
+# 3.2 (Nov 23 2022)
+
+# 3.2
+---
+#### Bug Fixes
+* Improve stability across all platforms, particularly with respect to the use of enrichment analysis
+* Fix operation of *Copy Column To Clipboard* functionality
+#### Linux
+* Improve compatibility across a greater number of distributions
+
+# 3.1
+---
+#### Bug Fixes
+* Fix display not updating when focused labelling option used
+* Fix occasional incorrect screenshot dimensions
+* Fix text style options sometimes not taking effect immediately
+* Fix adjacency matrix loader not setting node names
+* Fix crash that occurred when the graph changed during a find
+* Fix layout getting stuck on certain contracted graphs
+* Fix crash that occurred sometimes when cancelling a command
+* Fix transform flags (e.g. locked or pinned) not being properly recorded as an undoable step
+* Fix GML saver creating key names with a leading digit (which is prohibted by the standard)
+* Fix various issues with the GraphML saver
+* Fix crash that occurred if the application is closed at a specific point of a load
+* Fix import of attributes where the keys are large integers
+* Fix crash when plotting an IQR with zero outliers
+* Fix crash that occurred when flipping between find types multiple times
+* Fix blank plugin window when multiple tabs open
+
+# 3.0
+---
+#### Loading
+* Downloadable files can now be opened directly, either by using the *Open Url* option in the *File* menu, or by dragging and dropping hyperlinks onto the main window
+* A Graphia specific URL scheme is now registered so that the application may now be opened by clicking special hyperlinks; these can be created using the [Link Generator](https://graphia.app/link-generator.html)
+* Tabular lists of node pairs can now be loaded from pairwise CSV, TSV, SSV and XLSX files
+* Loading Cytoscape eXchange files is now possible, as used on [NDex](https://www.ndexbio.org/)
+* Graphviz *.dot* files may now be loaded
+* When loading from an adjacency matrix, it is now possible to choose to discard edges based on edge weight, and to skip double edges where the matrix is symmetric
+
+  ![matrix-loader.jpg](file:matrix-loader.jpg)
+
+#### Transforms
+* Added *Forward Attribute* transform; for graphs with contracted edges, this will copy the selected attribute's values to all elements hidden by the contraction
+* Added *Average Attribute* transform; create a new attribute whose values are determined by averaging the values of a numerical attribute on the basis of a categorical attribute - this allows for e.g. finding a cluster's average attribute value
+* Clustering algorithms now create additional node attributes that reflect the size of the clusters in which the respective nodes belong, effectively allowing filtering operations on the size of clusters
+
+#### Visualisations
+* Visualisations that use deleted source attributes can now have their source attributes changed, in contrast to the prior behaviour where a broken visualisation would need to be deleted and recreated
+* For numerical visualisations, the mapping of input value to output value can now be fine tuned
+
+  ![edit-mapping.jpg](file:edit-mapping.jpg)
+
+* An *Apply* button is now present on the gradient, palette and numeric mapping visualisation dialogs, for immediate preview of any changed settings
+
+#### Attributes
+* Attributes can now be imported, accessible via *Tools → Import Attributes From Table…*
+
+  ![import-attributes.jpg](file:import-attributes.jpg)
+
+* User defined attributes can now be removed if desired, accessible via *Tools → Remove Attributes…*
+* Attributes can now be cloned, accessible via *Tools → Clone Attribute…*
+* User defined attributes can now be edited, accessible via *Tools → Edit Attribute…*
+* There is now search functionality in all the places where attributes are chosen; this is most useful when selecting a *Data Value* attribute in the case where there are many
+
+  ![attribute-search.jpg](file:attribute-search.jpg)
+
+* The node attribute table now has a context sensitive menu that provides options relevant to the clicked attribute
+* The contents of a column from the node attribute table can now be copied to the clipboard, accessible by the context menu
+
+#### Layout
+* Layout settings are now accessible via a toolbar button
+* Node and edge sizes are now saved in the *.graphia* file and are adjustable via *Layout Settings*
+* Layout settings can now be saved as named presets, for quick access to frequently used settings
+
+  ![layout-settings.jpg](file:layout-settings.jpg)
+
+#### Enrichment
+* When viewing enrichment results, the chosen attribute names are now used for the column headers
+* The enrichment results table is now formatted in a way that improves Microsoft Excel's interpretation of it, when exported
+* Enrichment data columns are now correctly named regarding the the metrics actually employed
+
+#### Correlation
+* Correlating tables of discrete values is now possible, using the *Jaccard Index* or *Simple Matching Coefficient* algorithms
+* For continuous correlation, the *Euclidean Distance*, *Cosine Similarity* and *Biweight Midcorrelation (Bicor)* algorithms are now available
+
+  ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
+
+* Column annotation colours are now assigned by palette rather than by hashing the string value
+* Numerical column annotations are now displayed using a gradient
+* In the data plot, values can now be scaled by an attribute value
+* The epsilon used when log scaling data is now computed to use an appropriately sized value rather than a fixed constant
+* When loading correlation data with duplicate attribute column names, these are now considered separately rather than overwriting each other
+* The data plot can now be panned by dragging and zoomed using the mouse wheel
+* In the plot, data can now be combined into IQR boxplots based on one or more annotations, enabled by selecting *Group By Annotation* in the *Plot* menu
+* Furthermore, when *Group By Annotation* is enabled there is now another option to colour the IQR boxes with a user selected annotation
+
+  ![group-by-annotation.jpg](file:group-by-annotation.jpg)
+
+* When displaying IQR plots, outliers can now be disabled by toggling the *Show Outliers* menu option
+* Various buttons have been added to the tool bar to control the correlation plot
+* Data can now be log scaled when rendering IQR boxplots
+
+#### Miscellaneous
+* Hyperlinks in table cells are now clickable and some [basic HTML 3.2](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) can be displayed
+
+  ![clickable-link.jpg](file:clickable-link.jpg)
+
+* A log is now made of the steps taken in the graph's creation, accessible via *Tools → Show Provenance Log…*
+
+  ![provenance-log.jpg](file:provenance-log.jpg)
+
+* There is now an option to stay in component mode when finding, by default off
+* The *Latest Changes* option was added to the *Help* menu, which shows any new changes present in the running version
+
+#### Bug Fixes
+
+* Fix loading GML files where the edges precede the nodes
+* Fix crash when loading from empty files
+* Fix Matlab loader not handling some forms of adjacency matrix
+* Fix empty values being included in enrichment results
+* Fix plot grid lines getting incorrectly enabled in some circumstances
+* Fix missing column annotations where there were a large number of unique values
+* Fix possibility of dismissing the correlation parameters dialog before the data frame had been found
+* Fix occasionally ambiguous Esc key shortcut
+* Fix crash involving search and selection
+* Fix crash caused by graph visuals being altered during a graph change
+* Fix palette editor behaviour when there are few assignable values
+* Fix attribute ranges and shared values not getting updated in some circumstances
+* Fix transforms and visualisations not being refreshed when referenced attribute values change
+* Fix various issues involving attributes that change values and/or type during transforms
+* Fix malformed tab titles when the source file name contains periods
+* Fix wrong initial save file name
+* Fix empty graph warning being displayed before correlation estimate completes
+* Fix visualisation attribute list not updating following attribute changes
+* Fix crash on correlation plot when moving the mouse along a particular path
+
+#### Performance
+* Generally improved performance when there are a large number of components
+* Add option to disable multisampling, yielding a performance improvement
+* Add text to the *Options* dialog on macOS, suggesting opening the application in *Low Resolution Mode* for a further performance improvement
+* Improve performance of attributes model
+* Improved correlation data plot IQR rendering performance
+* Redundant correlation plot redraws have been reduced
+* Improve correlation column annotation rendering performance
+* Improve correlation column annotation sort performance
+
+#### Linux
+* An XDG desktop item is now automatically created, so Graphia will appear in system menus
+
 # 3.1 (Jul 18 2022)
 
 # 3.1
