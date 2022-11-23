@@ -1,3 +1,10 @@
+# dev-2548-gde7e14812 (Nov 23 2022)
+
+#### Features
+* Add a *Filtering* option to correlation parameters, more specifically enabling the ability to filter edges using the *k-Nearest Neighbours* strategy; this is particularly useful with datasets that are extremely correlated, where traditional thresholding cannot adequately differentiate between rows
+
+![knn-correlation.png](file:knn-correlation.png)
+
 # dev-2485-ga43f5a4df (Oct 28 2022)
 
 #### Bug Fixes
