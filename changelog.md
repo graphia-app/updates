@@ -1,3 +1,21 @@
+# dev-2604-ge4882047d (Dec 07 2022)
+
+#### Features
+* Replace the *Initial Transforms* section of the correlation loader with *Template*, allowing for a more flexible and customisable means of appending additional transforms and visualisations
+
+![correlation-parameters-template.png](file:correlation-parameters-template.png)
+
+* In the k-NN filtering case, add a field that allows selection of a minimum correlation value, so that weak relationships between rows can be discarded
+
+#### Bug Fixes
+* Fix crash that occurs when attempting  to creat a k-NN graph with zero edges
+* Fix crash when reloading certain save files where nodes have been manually deleted
+* Improve macOS update script to deal with the case where the target .app has been renamed
+
+#### Other
+* Generate debug information for arm64 platform (Apple M1), making crash diagnosis easier
+* Make various load failure modes report more specific reasons to the user
+
 # dev-2548-gde7e14812 (Nov 23 2022)
 
 #### Features
