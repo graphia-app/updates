@@ -1,3 +1,14 @@
+# dev-2655-g9ed9bacd1 (Jan 23 2023)
+
+#### Features
+* Add ability to save correlation plot images on a per attribute value basis, e.g. saving one image per cluster
+
+#### Other
+* Improve video driver crash detection
+* Improve installer error message on macOS when target directory is not writeable
+* Update to Qt 6.4.2
+* Improve scrolling behaviour in various places to be more desktop idiomatic
+
 # dev-2604-ge4882047d (Dec 07 2022)
 
 #### Features
