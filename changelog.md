@@ -1,3 +1,23 @@
+# dev-2777-g9bf98540a (Apr 24 2023)
+
+#### Features
+* Add option to load an external node layout using the same file format as produced by the export option
+* A command line headless mode is now available that enables the creation of *.graphia* files without manually needing to select parameters in the UI; potentially useful for batch processing on servers
+* Add *Crop To Selection* option to the attribute data table, which synchronises the node selection with the current table row selection
+* Add *View → Show Edges* option, which allows for disabling the rendering of edges entirely
+
+#### Bug Fixes
+* Fix crash when deleting nodes
+* When exporting node positions, export the non-scaled values
+* Fix various table row selection issues
+* Fix URL handler registration on Windows user installations
+
+#### Other
+* Improve Windows installer behaviour when dealing with user accounts with admin privileges
+* Windows installer now employs existing install's uninstaller when updating
+* Capture updater debug output in order to aid future debugging
+* Default sort order for *Find By Attribute Value* is now lexographical
+
 # dev-2655-g9ed9bacd1 (Jan 23 2023)
 
 #### Features
@@ -379,6 +399,75 @@
 
 
 
+
+# 4.0 (Apr 24 2023)
+
+# 4.0
+---
+#### Loading
+* When there is a choice of file type or plugin to use, said choice can be set as a default, avoiding future prompts
+* The file type selector of the file open dialog is now used to guide file type and plugin selection
+* The pairwise file loader now has a front end that allows for the configuration of columns within the source data table, so it's no longer necessary for pairwise files to be strictly 2 or 3 columns
+
+#### Transforms and Visualisations
+* Add facility to select favourite transforms, which are displayed at the top of the transform list
+* Add mechanism to save sets of transforms and visualisations for later recall
+
+  ![templates.png](file:templates.png)
+
+#### Attributes
+* There is now an option (on the *Misc* tab of the *Options* dialog) to change the way *Find By Attribute Value* sorts the list of possible attribute values; it can now be done alphanumerically, in addition to the normal behaviour of sorting from the large to small set size
+
+#### Correlation
+* The correlation plot columns can now be sorted by data value
+* The correlation plot is now vertically scrollable when it's too large for its container - i.e. when there are many column annotations
+* In the correlation loader, input data can now be clipped against a constant, or by *[Winsorization](https://en.wikipedia.org/wiki/Winsorizing)*
+* Correlation plot columns can now be sorted by hierarchical clustering, using the SLINK method with a Euclidean distance measure
+* Add a *Filtering* option to correlation parameters, more specifically enabling the ability to filter edges using the *k-Nearest Neighbours* strategy; this is particularly useful with datasets that are extremely correlated, where traditional thresholding cannot adequately differentiate between rows
+
+  ![knn-correlation.png](file:knn-correlation.png)
+
+* Replace the *Initial Transforms* section of the correlation loader with *Template*, allowing for a more flexible and customisable means of appending additional transforms and visualisations
+
+  ![correlation-template-parameters.png](file:correlation-template-parameters.png)
+
+* Add ability to save correlation plot images on a per attribute value basis, e.g. saving one image per cluster
+
+#### Miscellaneous
+* In plugins that have a data table, the source, target and neighbour rows can now be selected
+* Graph metrics display now reflects the visible component, when in component mode
+* Add option to interpret trackpad pan gestures as zooming; this is primarily useful for users of the Apple *Magic Mouse*, where it's more intuitive for scrolling vertically to map to zooming
+
+#### Bug Fixes
+* Bring MCL inline with the reference implementation by not skipping single node clusters
+* Fix pairwise exporter introducing extra quotes into its output
+* Fix crash that occurred when changing the graph with the *Find* interface active
+* Prevent showing the main context menu over the *Find* interface
+* Fix delay in showing *Find By Attribute* interface when an attribute has a large quantity of values
+* Fix deadlock/crash when cancelling a command
+* Fix initial dimensions on screenshot capture preset often being wrong
+* Fix renderer not updating when focused labelling enabled
+* Use the correct file extension when saving a non-native format
+* Fix correlation plot data value sorting occasionally behaving oddly when node selection changes
+* Fix changes to transform flags (locked, pinned) not being properly undoable
+* Fix blank graph rendering in some rare circumstances
+* Fix potential crash that might occur when changing the find attribute multiple times
+* Fix graph size estimate plot inappropriately showing \\"Empty Graph\\" in some circumstances
+* Fix poor behaviour when loading correlation data with anonymous columns
+* Fix \\"ghost\\" node selection box appearing after an unusual combination of mouse drags and key presses
+* Fix temporary lock-up at the end of a transform application
+* Fix visually overlapping components when nodes move from one component to another
+* Fix crash when reloading certain save files where nodes have been manually deleted
+
+#### Other
+* Move code base to Qt 6/Qt Quick 2 (Please [report](https://github.com/graphia-app/graphia/issues) bugs/regressions)
+* macOS builds now take advantage of *Apple M1* hardware
+* Capture more debug output on Windows
+* Improve video driver crash detection
+* Collect more information when a *std::exception* based crash occurs
+* Improve macOS update script to deal with the case where the target .app has been renamed
+* Improve installer error message on macOS when target directory is not writeable
+* Allow selection of alternative UI themes where available
 
 # 3.2 (Nov 23 2022)
 
