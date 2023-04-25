@@ -1,3 +1,8 @@
+# dev-2779-g560b4fd3d (Apr 25 2023)
+
+#### Bug Fixes
+* Fix clustering algorithms sorting clusters of the same size in an arbitrary order
+
 # dev-2777-g9bf98540a (Apr 24 2023)
 
 #### Features
