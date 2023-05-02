@@ -1,3 +1,8 @@
+# dev-2781-g6de5393a0 (May 02 2023)
+
+#### Bug Fixes
+* Fix various funky UI bugs that resulted from a (now reverted) change intended to work better (in future) with Qt 6.5
+
 # dev-2779-g560b4fd3d (Apr 25 2023)
 
 #### Bug Fixes
