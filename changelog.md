@@ -1,3 +1,21 @@
+# dev-2801-g7e7190f5a (May 12 2023)
+
+#### Features
+* Allow for loading adjacency matrices from *.txt* files
+* Improve error message when loading inconsistent tabular data files
+* Improve mouse wheel behaviour in correlation plot
+
+#### Bug Fixes
+* Fix crash involving favourite transforms
+* Fix crash when a load is cancelled in a particular phase
+* Reset UI state when switching from *Find By Attribute Value* to normal *Find*
+* Fix *Copy Column To Clipboard* copying the wrong data after a sequence of selection changes
+* Hide *Save As Images By* when there are no attributes with shared values
+
+#### Other
+* Improve node attribute table performance when node selection changes
+* Selection outlines of transparent graph elements are now rendered transparent too
+
 # dev-2781-g6de5393a0 (May 02 2023)
 
 #### Bug Fixes
