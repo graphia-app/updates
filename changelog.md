@@ -1,3 +1,12 @@
+# dev-2819-ga840ce03d (May 16 2023)
+
+#### Features
+* Add *Find Rows of Interest* functionality
+* Add *Type Cast* transform, to convert attribute types
+
+#### Bug Fixes
+* Fix crash when removing an attribute
+
 # dev-2801-g7e7190f5a (May 12 2023)
 
 #### Features
