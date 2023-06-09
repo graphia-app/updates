@@ -1,3 +1,18 @@
+# dev-2883-g437dbfa31 (Jun 09 2023)
+
+#### Features
+* Add ability to fix correlation plot sort order when *Data Value* sort is in force
+* Add *Save As Images By… → Row* option to output an image for each selected table row
+* Add facility to forcibly change the type and description of user defined attributes
+* Text size can now be altered on-the-fly in the *Layout Settings* panel
+* Text size and colour can now be used as a visualisation output in the normal way
+
+#### Bug Fixes
+* Fix keyboard interaction with attribute list UI
+* Fix correlation plot context menu state inconsistencies
+* Fix display not immediately updating following some preference changes
+* Fix *Save As Images By…* misbehaving with respect to file names with multiple dots in them
+
 # dev-2819-ga840ce03d (May 16 2023)
 
 #### Features
