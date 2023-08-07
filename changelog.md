@@ -1,3 +1,21 @@
+# dev-2936-g186e50f60 (Aug 07 2023)
+
+#### Features
+* Add *Attribute Value Heatmap* option, which displays a correlation heatmap based on some attribute's values
+
+  ![heatmap.png](file:heatmap.png)
+
+* Double clicking the background in overview mode now resets the view
+* Ease restrictions on zooming in overview mode
+* Auto zoom now operates in overview mode
+* Add *Focus Selection* option to *Table* menu, which will focus the nodes corresponding to the current table row selection
+* Add *Auto Focus* option, which does the same as the above, except automatically whenever the row selection is changed
+
+#### Bug Fixes
+* Fix crash on exit with particular versions of *MacOS*
+* Fix various subtle renderer transition bugs, particularly when several transitions are started/interrupted in rapid succession
+* Fix handling of some load failure modes
+
 # dev-2883-g437dbfa31 (Jun 09 2023)
 
 #### Features
