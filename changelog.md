@@ -1,9 +1,30 @@
+# dev-3148-gd201c1cfb (Nov 15 2023)
+
+#### Features
+* Improve file content identity algorithm
+* Add functionality to import column annotations onto an existing correlation plot
+* Improve UI feedback for selecting data rectangle, in correlation loader
+* Better handling of operating system UI theming, including *Dark Mode* on platforms that support it
+* High resolution rendering of the correlation plot on high DPI displays
+* Add antilog functionality to correlation plot
+* Enable log and antilog correlation scaling methods in situations where they were previously unavailable
+* Add *Shared Text* visualisation channel, enabling the textual annotation of groups of nodes
+
+#### Bug Fixes
+* Fix crash involving attribute selection UI component
+* Fix rendering of fonts with overlapping strokes (most obvious on *MacOS*)
+* Fix font selection not operating correctly in some circumstances
+
+#### Other
+* Update some library based dependencies
+* Update to Qt 6.6
+
 # dev-2936-g186e50f60 (Aug 07 2023)
 
 #### Features
 * Add *Attribute Value Heatmap* option, which displays a correlation heatmap based on some attribute's values
 
-  ![heatmap.png](file:heatmap.png)
+ ![heatmap.png](file:heatmap.png)
 
 * Double clicking the background in overview mode now resets the view
 * Ease restrictions on zooming in overview mode
@@ -109,7 +130,7 @@
 * In the k-NN filtering case, add a field that allows selection of a minimum correlation value, so that weak relationships between rows can be discarded
 
 #### Bug Fixes
-* Fix crash that occurs when attempting  to creat a k-NN graph with zero edges
+* Fix crash that occurs when attempting to creat a k-NN graph with zero edges
 * Fix crash when reloading certain save files where nodes have been manually deleted
 * Improve macOS update script to deal with the case where the target .app has been renamed
 
@@ -193,7 +214,7 @@
 #### Features
 * Add mechanism to save sets of transforms and visualisations for later recall
 
-  ![templates.png](file:templates.png)
+ ![templates.png](file:templates.png)
 
 * Add option to interpret trackpad pan gestures as zooming; this is primarily useful for users of the Apple *Magic Mouse*, where it's more intuitive for scrolling vertically to map to zooming
 
@@ -418,7 +439,7 @@
 
 * Add search functionality in all the places where attributes are chosen; this is most useful when selecting a *Data Value* attribute in the case where there are many
 
-  ![attribute-search.jpg](file:attribute-search.jpg)
+ ![attribute-search.jpg](file:attribute-search.jpg)
 
 * Add ability copy the contents of a column from the node attribute table to the clipboard, accessible by right clicking the column header
 * Add options to the node attribute table header context menu to explicitly sort ascending or descending
@@ -502,7 +523,7 @@
 * Add facility to select favourite transforms, which are displayed at the top of the transform list
 * Add mechanism to save sets of transforms and visualisations for later recall
 
-  ![templates.png](file:templates.png)
+ ![templates.png](file:templates.png)
 
 #### Attributes
 * There is now an option (on the *Misc* tab of the *Options* dialog) to change the way *Find By Attribute Value* sorts the list of possible attribute values; it can now be done alphanumerically, in addition to the normal behaviour of sorting from the large to small set size
@@ -514,11 +535,11 @@
 * Correlation plot columns can now be sorted by hierarchical clustering, using the SLINK method with a Euclidean distance measure
 * Add a *Filtering* option to correlation parameters, more specifically enabling the ability to filter edges using the *k-Nearest Neighbours* strategy; this is particularly useful with datasets that are extremely correlated, where traditional thresholding cannot adequately differentiate between rows
 
-  ![knn-correlation.png](file:knn-correlation.png)
+ ![knn-correlation.png](file:knn-correlation.png)
 
 * Replace the *Initial Transforms* section of the correlation loader with *Template*, allowing for a more flexible and customisable means of appending additional transforms and visualisations
 
-  ![correlation-template-parameters.png](file:correlation-template-parameters.png)
+ ![correlation-template-parameters.png](file:correlation-template-parameters.png)
 
 * Add ability to save correlation plot images on a per attribute value basis, e.g. saving one image per cluster
 
@@ -585,7 +606,7 @@
 * Add facility to select favourite transforms, which are displayed at the top of the transform list
 * Add mechanism to save sets of transforms and visualisations for later recall
 
-  ![templates.png](file:templates.png)
+ ![templates.png](file:templates.png)
 
 #### Attributes
 * There is now an option (on the *Misc* tab of the *Options* dialog) to change the way *Find By Attribute Value* sorts the list of possible attribute values; it can now be done alphanumerically, in addition to the normal behaviour of sorting from the large to small set size
@@ -597,11 +618,11 @@
 * Correlation plot columns can now be sorted by hierarchical clustering, using the SLINK method with a Euclidean distance measure
 * Add a *Filtering* option to correlation parameters, more specifically enabling the ability to filter edges using the *k-Nearest Neighbours* strategy; this is particularly useful with datasets that are extremely correlated, where traditional thresholding cannot adequately differentiate between rows
 
-  ![knn-correlation.png](file:knn-correlation.png)
+ ![knn-correlation.png](file:knn-correlation.png)
 
 * Replace the *Initial Transforms* section of the correlation loader with *Template*, allowing for a more flexible and customisable means of appending additional transforms and visualisations
 
-  ![correlation-template-parameters.png](file:correlation-template-parameters.png)
+ ![correlation-template-parameters.png](file:correlation-template-parameters.png)
 
 * Add ability to save correlation plot images on a per attribute value basis, e.g. saving one image per cluster
 
@@ -654,7 +675,7 @@
 * Add facility to select favourite transforms, which are displayed at the top of the transform list
 * Add mechanism to save sets of transforms and visualisations for later recall
 
-  ![templates.png](file:templates.png)
+ ![templates.png](file:templates.png)
 
 #### Attributes
 * There is now an option (on the *Misc* tab of the *Options* dialog) to change the way *Find By Attribute Value* sorts the list of possible attribute values; it can now be done alphanumerically, in addition to the normal behaviour of sorting from the large to small set size
@@ -666,11 +687,11 @@
 * Correlation plot columns can now be sorted by hierarchical clustering, using the SLINK method with a Euclidean distance measure
 * Add a *Filtering* option to correlation parameters, more specifically enabling the ability to filter edges using the *k-Nearest Neighbours* strategy; this is particularly useful with datasets that are extremely correlated, where traditional thresholding cannot adequately differentiate between rows
 
-  ![knn-correlation.png](file:knn-correlation.png)
+ ![knn-correlation.png](file:knn-correlation.png)
 
 * Replace the *Initial Transforms* section of the correlation loader with *Template*, allowing for a more flexible and customisable means of appending additional transforms and visualisations
 
-  ![correlation-template-parameters.png](file:correlation-template-parameters.png)
+ ![correlation-template-parameters.png](file:correlation-template-parameters.png)
 
 * Add ability to save correlation plot images on a per attribute value basis, e.g. saving one image per cluster
 
@@ -749,7 +770,7 @@
 * Graphviz *.dot* files may now be loaded
 * When loading from an adjacency matrix, it is now possible to choose to discard edges based on edge weight, and to skip double edges where the matrix is symmetric
 
-  ![matrix-loader.jpg](file:matrix-loader.jpg)
+ ![matrix-loader.jpg](file:matrix-loader.jpg)
 
 #### Transforms
 * Added *Forward Attribute* transform; for graphs with contracted edges, this will copy the selected attribute's values to all elements hidden by the contraction
@@ -760,21 +781,21 @@
 * Visualisations that use deleted source attributes can now have their source attributes changed, in contrast to the prior behaviour where a broken visualisation would need to be deleted and recreated
 * For numerical visualisations, the mapping of input value to output value can now be fine tuned
 
-  ![edit-mapping.jpg](file:edit-mapping.jpg)
+ ![edit-mapping.jpg](file:edit-mapping.jpg)
 
 * An *Apply* button is now present on the gradient, palette and numeric mapping visualisation dialogs, for immediate preview of any changed settings
 
 #### Attributes
 * Attributes can now be imported, accessible via *Tools → Import Attributes From Table…*
 
-  ![import-attributes.jpg](file:import-attributes.jpg)
+ ![import-attributes.jpg](file:import-attributes.jpg)
 
 * User defined attributes can now be removed if desired, accessible via *Tools → Remove Attributes…*
 * Attributes can now be cloned, accessible via *Tools → Clone Attribute…*
 * User defined attributes can now be edited, accessible via *Tools → Edit Attribute…*
 * There is now search functionality in all the places where attributes are chosen; this is most useful when selecting a *Data Value* attribute in the case where there are many
 
-  ![attribute-search.jpg](file:attribute-search.jpg)
+ ![attribute-search.jpg](file:attribute-search.jpg)
 
 * The node attribute table now has a context sensitive menu that provides options relevant to the clicked attribute
 * The contents of a column from the node attribute table can now be copied to the clipboard, accessible by the context menu
@@ -784,7 +805,7 @@
 * Node and edge sizes are now saved in the *.graphia* file and are adjustable via *Layout Settings*
 * Layout settings can now be saved as named presets, for quick access to frequently used settings
 
-  ![layout-settings.jpg](file:layout-settings.jpg)
+ ![layout-settings.jpg](file:layout-settings.jpg)
 
 #### Enrichment
 * When viewing enrichment results, the chosen attribute names are now used for the column headers
@@ -795,7 +816,7 @@
 * Correlating tables of discrete values is now possible, using the *Jaccard Index* or *Simple Matching Coefficient* algorithms
 * For continuous correlation, the *Euclidean Distance*, *Cosine Similarity* and *Biweight Midcorrelation (Bicor)* algorithms are now available
 
-  ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
+ ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
 
 * Column annotation colours are now assigned by palette rather than by hashing the string value
 * Numerical column annotations are now displayed using a gradient
@@ -806,7 +827,7 @@
 * In the plot, data can now be combined into IQR boxplots based on one or more annotations, enabled by selecting *Group By Annotation* in the *Plot* menu
 * Furthermore, when *Group By Annotation* is enabled there is now another option to colour the IQR boxes with a user selected annotation
 
-  ![group-by-annotation.jpg](file:group-by-annotation.jpg)
+ ![group-by-annotation.jpg](file:group-by-annotation.jpg)
 
 * When displaying IQR plots, outliers can now be disabled by toggling the *Show Outliers* menu option
 * Various buttons have been added to the tool bar to control the correlation plot
@@ -815,11 +836,11 @@
 #### Miscellaneous
 * Hyperlinks in table cells are now clickable and some [basic HTML 3.2](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) can be displayed
 
-  ![clickable-link.jpg](file:clickable-link.jpg)
+ ![clickable-link.jpg](file:clickable-link.jpg)
 
 * A log is now made of the steps taken in the graph's creation, accessible via *Tools → Show Provenance Log…*
 
-  ![provenance-log.jpg](file:provenance-log.jpg)
+ ![provenance-log.jpg](file:provenance-log.jpg)
 
 * There is now an option to stay in component mode when finding, by default off
 * The *Latest Changes* option was added to the *Help* menu, which shows any new changes present in the running version
@@ -890,7 +911,7 @@
 * Graphviz *.dot* files may now be loaded
 * When loading from an adjacency matrix, it is now possible to choose to discard edges based on edge weight, and to skip double edges where the matrix is symmetric
 
-  ![matrix-loader.jpg](file:matrix-loader.jpg)
+ ![matrix-loader.jpg](file:matrix-loader.jpg)
 
 #### Transforms
 * Added *Forward Attribute* transform; for graphs with contracted edges, this will copy the selected attribute's values to all elements hidden by the contraction
@@ -901,21 +922,21 @@
 * Visualisations that use deleted source attributes can now have their source attributes changed, in contrast to the prior behaviour where a broken visualisation would need to be deleted and recreated
 * For numerical visualisations, the mapping of input value to output value can now be fine tuned
 
-  ![edit-mapping.jpg](file:edit-mapping.jpg)
+ ![edit-mapping.jpg](file:edit-mapping.jpg)
 
 * An *Apply* button is now present on the gradient, palette and numeric mapping visualisation dialogs, for immediate preview of any changed settings
 
 #### Attributes
 * Attributes can now be imported, accessible via *Tools → Import Attributes From Table…*
 
-  ![import-attributes.jpg](file:import-attributes.jpg)
+ ![import-attributes.jpg](file:import-attributes.jpg)
 
 * User defined attributes can now be removed if desired, accessible via *Tools → Remove Attributes…*
 * Attributes can now be cloned, accessible via *Tools → Clone Attribute…*
 * User defined attributes can now be edited, accessible via *Tools → Edit Attribute…*
 * There is now search functionality in all the places where attributes are chosen; this is most useful when selecting a *Data Value* attribute in the case where there are many
 
-  ![attribute-search.jpg](file:attribute-search.jpg)
+ ![attribute-search.jpg](file:attribute-search.jpg)
 
 * The node attribute table now has a context sensitive menu that provides options relevant to the clicked attribute
 * The contents of a column from the node attribute table can now be copied to the clipboard, accessible by the context menu
@@ -925,7 +946,7 @@
 * Node and edge sizes are now saved in the *.graphia* file and are adjustable via *Layout Settings*
 * Layout settings can now be saved as named presets, for quick access to frequently used settings
 
-  ![layout-settings.jpg](file:layout-settings.jpg)
+ ![layout-settings.jpg](file:layout-settings.jpg)
 
 #### Enrichment
 * When viewing enrichment results, the chosen attribute names are now used for the column headers
@@ -936,7 +957,7 @@
 * Correlating tables of discrete values is now possible, using the *Jaccard Index* or *Simple Matching Coefficient* algorithms
 * For continuous correlation, the *Euclidean Distance*, *Cosine Similarity* and *Biweight Midcorrelation (Bicor)* algorithms are now available
 
-  ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
+ ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
 
 * Column annotation colours are now assigned by palette rather than by hashing the string value
 * Numerical column annotations are now displayed using a gradient
@@ -947,7 +968,7 @@
 * In the plot, data can now be combined into IQR boxplots based on one or more annotations, enabled by selecting *Group By Annotation* in the *Plot* menu
 * Furthermore, when *Group By Annotation* is enabled there is now another option to colour the IQR boxes with a user selected annotation
 
-  ![group-by-annotation.jpg](file:group-by-annotation.jpg)
+ ![group-by-annotation.jpg](file:group-by-annotation.jpg)
 
 * When displaying IQR plots, outliers can now be disabled by toggling the *Show Outliers* menu option
 * Various buttons have been added to the tool bar to control the correlation plot
@@ -956,11 +977,11 @@
 #### Miscellaneous
 * Hyperlinks in table cells are now clickable and some [basic HTML 3.2](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) can be displayed
 
-  ![clickable-link.jpg](file:clickable-link.jpg)
+ ![clickable-link.jpg](file:clickable-link.jpg)
 
 * A log is now made of the steps taken in the graph's creation, accessible via *Tools → Show Provenance Log…*
 
-  ![provenance-log.jpg](file:provenance-log.jpg)
+ ![provenance-log.jpg](file:provenance-log.jpg)
 
 * There is now an option to stay in component mode when finding, by default off
 * The *Latest Changes* option was added to the *Help* menu, which shows any new changes present in the running version
@@ -1010,7 +1031,7 @@
 * Graphviz *.dot* files may now be loaded
 * When loading from an adjacency matrix, it is now possible to choose to discard edges based on edge weight, and to skip double edges where the matrix is symmetric
 
-  ![matrix-loader.jpg](file:matrix-loader.jpg)
+ ![matrix-loader.jpg](file:matrix-loader.jpg)
 
 #### Transforms
 * Added *Forward Attribute* transform; for graphs with contracted edges, this will copy the selected attribute's values to all elements hidden by the contraction
@@ -1021,21 +1042,21 @@
 * Visualisations that use deleted source attributes can now have their source attributes changed, in contrast to the prior behaviour where a broken visualisation would need to be deleted and recreated
 * For numerical visualisations, the mapping of input value to output value can now be fine tuned
 
-  ![edit-mapping.jpg](file:edit-mapping.jpg)
+ ![edit-mapping.jpg](file:edit-mapping.jpg)
 
 * An *Apply* button is now present on the gradient, palette and numeric mapping visualisation dialogs, for immediate preview of any changed settings
 
 #### Attributes
 * Attributes can now be imported, accessible via *Tools → Import Attributes From Table…*
 
-  ![import-attributes.jpg](file:import-attributes.jpg)
+ ![import-attributes.jpg](file:import-attributes.jpg)
 
 * User defined attributes can now be removed if desired, accessible via *Tools → Remove Attributes…*
 * Attributes can now be cloned, accessible via *Tools → Clone Attribute…*
 * User defined attributes can now be edited, accessible via *Tools → Edit Attribute…*
 * There is now search functionality in all the places where attributes are chosen; this is most useful when selecting a *Data Value* attribute in the case where there are many
 
-  ![attribute-search.jpg](file:attribute-search.jpg)
+ ![attribute-search.jpg](file:attribute-search.jpg)
 
 * The node attribute table now has a context sensitive menu that provides options relevant to the clicked attribute
 * The contents of a column from the node attribute table can now be copied to the clipboard, accessible by the context menu
@@ -1045,7 +1066,7 @@
 * Node and edge sizes are now saved in the *.graphia* file and are adjustable via *Layout Settings*
 * Layout settings can now be saved as named presets, for quick access to frequently used settings
 
-  ![layout-settings.jpg](file:layout-settings.jpg)
+ ![layout-settings.jpg](file:layout-settings.jpg)
 
 #### Enrichment
 * When viewing enrichment results, the chosen attribute names are now used for the column headers
@@ -1056,7 +1077,7 @@
 * Correlating tables of discrete values is now possible, using the *Jaccard Index* or *Simple Matching Coefficient* algorithms
 * For continuous correlation, the *Euclidean Distance*, *Cosine Similarity* and *Biweight Midcorrelation (Bicor)* algorithms are now available
 
-  ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
+ ![correlation-algorithms.jpg](file:correlation-algorithms.jpg)
 
 * Column annotation colours are now assigned by palette rather than by hashing the string value
 * Numerical column annotations are now displayed using a gradient
@@ -1067,7 +1088,7 @@
 * In the plot, data can now be combined into IQR boxplots based on one or more annotations, enabled by selecting *Group By Annotation* in the *Plot* menu
 * Furthermore, when *Group By Annotation* is enabled there is now another option to colour the IQR boxes with a user selected annotation
 
-  ![group-by-annotation.jpg](file:group-by-annotation.jpg)
+ ![group-by-annotation.jpg](file:group-by-annotation.jpg)
 
 * When displaying IQR plots, outliers can now be disabled by toggling the *Show Outliers* menu option
 * Various buttons have been added to the tool bar to control the correlation plot
@@ -1076,11 +1097,11 @@
 #### Miscellaneous
 * Hyperlinks in table cells are now clickable and some [basic HTML 3.2](https://doc.qt.io/qt-5/qml-qtquick-text.html#textFormat-prop) can be displayed
 
-  ![clickable-link.jpg](file:clickable-link.jpg)
+ ![clickable-link.jpg](file:clickable-link.jpg)
 
 * A log is now made of the steps taken in the graph's creation, accessible via *Tools → Show Provenance Log…*
 
-  ![provenance-log.jpg](file:provenance-log.jpg)
+ ![provenance-log.jpg](file:provenance-log.jpg)
 
 * There is now an option to stay in component mode when finding, by default off
 * The *Latest Changes* option was added to the *Help* menu, which shows any new changes present in the running version
@@ -1141,12 +1162,12 @@
 * Fix empty values being included in enrichment results
 * Fix enrichment result table cells being interpreted as dates in *Microsoft Excel*
 * macOS
-  * Fix help tool tips being badly sized
-  * Fix flickering of windows when adjusting the correlation plot
-  * Fix the WebSearch plugin being broken
+ amend-existing-head.sh changelog.md CNAME confirm-upload.sh diff.sh generate-changelog.md.sh index.json Fix help tool tips being badly sized
+ amend-existing-head.sh changelog.md CNAME confirm-upload.sh diff.sh generate-changelog.md.sh index.json Fix flickering of windows when adjusting the correlation plot
+ amend-existing-head.sh changelog.md CNAME confirm-upload.sh diff.sh generate-changelog.md.sh index.json Fix the WebSearch plugin being broken
 * Linux
-  * Improve distribution compatibility
-  * Fix crashes with WebSearch plugin on some platforms
+ amend-existing-head.sh changelog.md CNAME confirm-upload.sh diff.sh generate-changelog.md.sh index.json Improve distribution compatibility
+ amend-existing-head.sh changelog.md CNAME confirm-upload.sh diff.sh generate-changelog.md.sh index.json Fix crashes with WebSearch plugin on some platforms
 
 # 2.0 (May 22 2020)
 
