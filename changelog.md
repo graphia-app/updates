@@ -1,3 +1,23 @@
+# dev-3331-g53e7eef9d (Mar 28 2024)
+
+#### Features
+* Adjacency matrix loaders can now be cancelled
+* General improvement to operation on high DPI displays, particularly with fractional scaling factors
+
+#### Bug Fixes
+* Fix last row of attribute table being obscured by horizontal scroll bar
+* Workaround QTBUG-120352; invisible scroll bars
+* Fix crash in *Type Cast* transform
+* Fix *Show Edge Direction* option not being immediately applied
+* Fix crash when trying to load single column correlation data tables
+* Fix row height of some list displays
+* Fix re-enabling a visualisation with a lost attribute causing errors
+* Fix operation of context sensitive menu items on *macOS*
+
+#### Other
+* Experimental WebAssembly support
+* Update to Qt 6.6.3
+
 # dev-3148-gd201c1cfb (Nov 15 2023)
 
 #### Features
