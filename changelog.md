@@ -1,3 +1,16 @@
+# dev-3381-gec04ee00f (Apr 22 2024)
+
+#### Features
+* Add *[Softmax](https://en.wikipedia.org/wiki/Softmax_function)* data normalisation method to correlation loader
+
+#### Bug Fixes
+* Tutorial now works on WebAssembly
+* Fix locked transforms displaying 'nan' for drop down list parameters
+
+#### Other
+* Workaround for crash on NVidia based Windows systems
+* Update to Qt 6.7.0
+
 # dev-3331-g53e7eef9d (Mar 28 2024)
 
 #### Features
