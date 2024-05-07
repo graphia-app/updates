@@ -1,3 +1,8 @@
+# dev-3388-g6c7bf9c0b (May 07 2024)
+
+#### Bug Fixes
+* Fix crashing enrichment analysis
+
 # dev-3381-gec04ee00f (Apr 22 2024)
 
 #### Features
