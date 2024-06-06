@@ -1,3 +1,20 @@
+# dev-3444-g930223aca (Jun 06 2024)
+
+#### Features
+* Command line arguments can now be passed to the application via the URL of the WebAssembly version
+* Warnings are now shown regarding duplicate values when importing attributes or column annotations
+
+#### Bug Fixes
+* Fix potential crash in correlation annotation rendering
+* Fix editing of attributes not undoing correctly
+* Fix custom visualisation mapping controls being available when attribute has no range
+
+#### Other
+* Reduce probability of subwindows getting hidden in the background on open
+* Adjust source code to use modern Qt QML build system
+* Improve performance of Find By Attribute Value
+* Disable code signing on Windows build
+
 # dev-3388-g6c7bf9c0b (May 07 2024)
 
 #### Bug Fixes
