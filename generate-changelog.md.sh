@@ -56,10 +56,21 @@ done < <(git rev-list --reverse master)
 
 VERSIONS=$(echo ${!CHANGELOGS[@]})
 VERSIONS=$(echo $(printf "%s\n" ${VERSIONS} | sort -rV))
+
+# Don't want rc releases unless there is no corresponding final release
+RC_FILTER=$(echo ${VERSIONS} | tr ' ' '\n' | grep '^[0-9]\+\.[0-9]\+$' | \
+    sed -e 's/\(.*\)/\1-rc[0-9]+/' |tr '\n' '|' | \
+    sed -e 's/\(.*\)|$/^\1$/')
+
 for VERSION in ${VERSIONS}
 do
+    if [[ "${VERSION}" =~ ${RC_FILTER} ]]
+    then
+        continue
+    fi
+
     # HACK
-    if [[ "${VERSION}" =~ ^dev-9999.*|.*rc[0-9]+$ ]]
+    if [[ "${VERSION}" =~ ^dev-9999.*$ ]]
     then
         continue
     fi
