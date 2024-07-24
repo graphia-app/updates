@@ -546,6 +546,99 @@
 
 
 
+# 5.0-rc5 (Jul 24 2024)
+
+# 5.0
+---
+
+#### Loading
+* Allow for loading adjacency matrices from *.txt* files
+* Improve error message when loading inconsistent tabular data files
+* Improve file content identity algorithm
+* Adjacency matrix loaders can now be cancelled
+
+#### Transforms and Visualisations
+* Add *Type Cast* transform, to convert attribute types
+* *Text Size* can now be used as a visualisation channel
+
+ ![text-size.png](file:text-size.png)
+
+* *Text Colour* can now be used as a visualisation channel
+
+ ![text-colour.png](file:text-colour.png)
+
+* Add *Shared Text* visualisation channel, enabling the textual annotation of groups of nodes
+
+ ![shared-text.png](file:shared-text.png)
+
+#### Attributes
+* Add facility to edit the type and description of user defined attributes
+
+ ![edit-attribute-type.png](file:edit-attribute-type.png)
+
+* Warnings are now shown regarding duplicate values when importing attributes
+
+#### Correlation
+* Add *Find Rows of Interest* functionality, identifying rows that correlate with selected columns
+
+ ![find-rows-of-interest.png](file:find-rows-of-interest.png)
+
+* Add ability to fix correlation plot sort order when *Data Value* sort is in force
+* Add *Save As Images By… → Row* option to output an image for each selected table row
+* Add functionality to import column annotations onto an existing correlation plot
+* High resolution rendering of the correlation plot on high DPI displays
+* Add antilog functionality to correlation plot
+* Enable log and antilog correlation scaling methods in situations where they were previously unavailable
+* Add [Softmax](https://en.wikipedia.org/wiki/Softmax_function) data normalisation method to correlation loader
+* Warnings are now shown regarding duplicate values when importing column annotations
+
+#### Miscellaneous
+* [WebAssembly](https://web.graphia.app/) support
+
+ ![webassembly.png](file:webassembly.png)
+
+* Add option to load an external node layout using the same file format as produced by the export option
+* A command line headless mode is now available that enables the creation of *.graphia* files without manually needing to select parameters in the UI; useful for batch processing on servers
+* Add *Crop To Selection* option to the attribute data table, which synchronises the node selection with the current table row selection
+* Add *View → Show Edges* option, which allows for disabling the rendering of edges entirely
+* Text size can now be altered on-the-fly in the *Layout Settings* panel
+* Double clicking the background in overview mode now resets the view
+* Ease restrictions on zooming in overview mode
+* Add *Focus Selection* option to Table menu, which will focus the nodes corresponding to the current table row selection
+* Add *Auto Focus* option, which does the same as the above, except automatically whenever the row selection is changed
+* Better handling of operating system UI theming, including *Dark Mode* on platforms that support it
+* Default sort order for *Find By Attribute Value* is now lexographical
+
+#### Bug Fixes
+* When exporting node positions, export the non-scaled values
+* Fix various table row selection issues
+* Reset UI state when switching from *Find By Attribute Value* to normal *Find*
+* Fix *Copy Column To Clipboard* copying the wrong data after a sequence of selection changes
+* Fix crash when removing an attribute
+* Fix keyboard interaction with attribute list UI
+* Fix correlation plot context menu state inconsistencies
+* Fix *Save As Images By…* misbehaving with respect to file names with multiple dots in them
+* Fix various subtle renderer transition bugs, particularly when several transitions are started/interrupted in rapid succession
+* Fix handling of some load failure modes
+* Fix crash involving attribute selection UI component
+* Fix rendering of fonts with overlapping strokes (most obvious on *MacOS*)
+* Fix font selection not operating correctly in some circumstances
+* Fix last row of attribute table being obscured by horizontal scroll bar
+* Fix some visual options not being immediately applied
+* Fix crash when trying to load single column correlation data tables
+* Fix re-enabling a visualisation with a lost attribute causing errors
+* Fix operation of context sensitive menu items on *MacOS*
+* Fix locked transforms displaying 'nan' for drop down list parameters
+* Fix potential crash in correlation annotation rendering
+* Fix editing of attributes not undoing correctly
+* Fix custom visualisation mapping controls being available when attribute has no range
+
+#### Other
+* General improvement to operation on high DPI displays, particularly with fractional scaling factors as seen on *Windows*
+* Improve node attribute table performance when node selection changes
+* Selection outlines of transparent graph elements are now rendered transparent too
+* Update to Qt 6.7.0
+
 # 5.0-rc4 (Jul 19 2024)
 
 # 5.0
